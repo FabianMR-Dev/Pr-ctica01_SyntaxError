@@ -8,7 +8,7 @@ import java.util.Random;
 // ==========================================
 // PATRÓN STRATEGY: Interfaces y Clases
 // ==========================================
-interface EstrategiaPoder {
+public interface EstrategiaPoder {
     int calcularDanioAtaque();
     int mitigarDanio(int danioRecibido);
     String obtenerNombrePoder();
