@@ -1,19 +1,18 @@
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.SocketPermission;
+import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Esta clase representa a un observador que está viendo el combate.
  * Cada observador apoya a un personaje específico y guarda un historial
- * de todo lo que pasa durante la pelea.
- * 
- * @author SyntaxError
+ * de todo lo que pasa durante la pelea. 
  */
 public class Observador implements Espectador{
     private String id; //id de los observadores 
     private String personajeApoyado;
-    private list<String> historialCombate;
+    private List<String> historialCombate;
 
     /**
      * Constructor -creamos un nuevo espectador que verá la transmisión del combate
@@ -66,7 +65,6 @@ public class Observador implements Espectador{
                 System.out.println("El combate terminó en empate");
             }
         } catch (IOException e) {
-            //Si algo sale mal al escribir el archivo, mostramos mensaje de error
             System.out.println("Error al escribir la bitácora de " + id);
         }
     }

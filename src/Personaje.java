@@ -6,7 +6,7 @@ import java.util.Random;
  * Clase para representar a un peleador de La Rosa. 
  * Cada personaje tiene un nombre, franquicia, puntos de vida (hp), un poder actual y una lista de poderes disponibles.
  */
-public abstract class Personaje extends SimuladorBatalla {
+public abstract class Personaje{
     
     String nombre;
     String franquicia;
@@ -19,7 +19,7 @@ public abstract class Personaje extends SimuladorBatalla {
      * @param objetivo a quien se va a atacar.
      * @param arena para notificar a los espectadores sobre el ataque.
      */
-    public void atacar(Personaje objetivo, TransmisionCombate arena) {
+    public void atacar(Personaje objetivo, ArenaBatalla arena) {
         if (!this.estaVivo() || !objetivo.estaVivo()) return;
         
         int danioGenerado = poderActual.calcularDanioAtaque();
@@ -32,7 +32,7 @@ public abstract class Personaje extends SimuladorBatalla {
      * @param objetivo de quien se recibe el ataque.
      * @param arena para notificar a los espectadores sobre el ataque.
      */
-    public void defender(int danioEntrante, TransmisionCombate arena) {
+    public void defender(int danioEntrante, ArenaBatalla arena) {
         int danioReal = poderActual.mitigarDanio(danioEntrante);
         if (danioReal < 0) danioReal = 0;
         this.hp -= danioReal;
@@ -44,7 +44,7 @@ public abstract class Personaje extends SimuladorBatalla {
      * El peleador consume un objeto para obtener un nuevo poder de su lista de poderes disponibles. Se notifica a los espectadores sobre el nuevo poder obtenido.
      * @param arena para notificar a los espectadores sobre el nuevo poder obtenido.
      */
-    public void consumirObjeto(TransmisionCombate arena) {
+    public void consumirObjeto(ArenaBatall arena) {
         if (!this.estaVivo() || poderesDisponibles.isEmpty()) return;
         
         Random rand = new Random();

@@ -18,8 +18,8 @@ public interface Sujeto {
     public void removerObservador(Espectador obs);
     
     /**
-     * Le dice a los observadores qué ha pasado en el combate 
-     * @param obs El observador que ve el combate 
+     * Notifica a los observadores qué ha pasado en el combate 
+     * @param evento El evento que se ha producido en el combate. 
      */
-    public void notificar(Espectador obs);
+    public void notificar(String evento);
 }
