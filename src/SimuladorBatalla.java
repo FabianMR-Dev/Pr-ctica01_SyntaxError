@@ -16,7 +16,7 @@ public class SimuladorBatalla {
     }
 
     public static void ejecutarSimulacion(int numCaso) {
-        ArenaBatalla arena = new ArenaBatalla();
+        Combate arena = new Combate();
         
         // Crear espectadores
         Observador esp1 = new Observador("espectador123", "Korby");
@@ -24,17 +24,17 @@ public class SimuladorBatalla {
         Observador esp3 = new Observador("espectador789", "Dittuu");
         Observador esp4 = new Observador("VIP_User", "Korby");
         
-        arena.registrarEspectador(esp1);
-        arena.registrarEspectador(esp2);
-        arena.registrarEspectador(esp3);
-        arena.registrarEspectador(esp4);
+        arena.registrarObservador(esp1);
+        arena.registrarObservador(esp2);
+        arena.registrarObservador(esp3);
+        arena.registrarObservador(esp4);
 
         // Crear personajes
         Korby korby = new Korby();
         MeganMan meganMan = new MeganMan();
         Dittuu dittuu = new Dittuu();
 
-        arena.notificarEspectadores("¡COMIENZA EL COMBATE EN LA EMPRESA DE LA ROSA!");
+        arena.notificar("¡COMIENZA EL COMBATE EN LA EMPRESA DE LA ROSA!");
 
         // Lógica de los casos de prueba (Arreglando las peleas)
         if (numCaso == 1) {
@@ -75,9 +75,9 @@ public class SimuladorBatalla {
         else if (meganMan.estaVivo()) ganador = meganMan;
         else if (dittuu.estaVivo()) ganador = dittuu;
 
-        arena.notificarEspectadores("\n¡EL COMBATE HA TERMINADO!");
+        arena.notificar("\n¡EL COMBATE HA TERMINADO!");
         if(ganador != null) {
-            arena.notificarEspectadores("¡El ganador indiscutible es " + ganador.nombre + "!");
+            arena.notificar("¡El ganador indiscutible es " + ganador.nombre + "!");
         }
 
         // Generar Bitácoras

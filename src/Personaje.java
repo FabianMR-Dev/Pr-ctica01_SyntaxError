@@ -19,11 +19,11 @@ public abstract class Personaje{
      * @param objetivo a quien se va a atacar.
      * @param arena para notificar a los espectadores sobre el ataque.
      */
-    public void atacar(Personaje objetivo, ArenaBatalla arena) {
+    public void atacar(Personaje objetivo, Combate arena) {
         if (!this.estaVivo() || !objetivo.estaVivo()) return;
         
         int danioGenerado = poderActual.calcularDanioAtaque();
-        arena.notificarEspectadores(this.nombre + " " + poderActual.obtenerMensajeAtaque() + " contra " + objetivo.nombre + "!");
+        arena.notificar(this.nombre + " " + poderActual.obtenerMensajeAtaque() + " contra " + objetivo.nombre + "!");
         objetivo.defender(danioGenerado, arena);
     }
 
@@ -32,26 +32,26 @@ public abstract class Personaje{
      * @param objetivo de quien se recibe el ataque.
      * @param arena para notificar a los espectadores sobre el ataque.
      */
-    public void defender(int danioEntrante, ArenaBatalla arena) {
+    public void defender(int danioEntrante, Combate arena) {
         int danioReal = poderActual.mitigarDanio(danioEntrante);
         if (danioReal < 0) danioReal = 0;
         this.hp -= danioReal;
         
-        arena.notificarEspectadores("   -> " + this.nombre + " se defiende usando [" + poderActual.obtenerNombrePoder() + "]. Recibe " + danioReal + " de daño. HP restante: " + Math.max(0, this.hp));
+        arena.notificar("   -> " + this.nombre + " se defiende usando [" + poderActual.obtenerNombrePoder() + "]. Recibe " + danioReal + " de daño. HP restante: " + Math.max(0, this.hp));
     }
 
     /**
      * El peleador consume un objeto para obtener un nuevo poder de su lista de poderes disponibles. Se notifica a los espectadores sobre el nuevo poder obtenido.
      * @param arena para notificar a los espectadores sobre el nuevo poder obtenido.
      */
-    public void consumirObjeto(ArenaBatalla arena) {
+    public void consumirObjeto(Combate arena) {
         if (!this.estaVivo() || poderesDisponibles.isEmpty()) return;
         
         Random rand = new Random();
         EstrategiaPoder nuevoPoder = poderesDisponibles.get(rand.nextInt(poderesDisponibles.size()));
         this.poderActual = nuevoPoder;
         
-        arena.notificarEspectadores("\n¡" + this.nombre + " ha consumido un objeto y obtiene el poder: " + nuevoPoder.obtenerNombrePoder() + "!");
+        arena.notificar("\n¡" + this.nombre + " ha consumido un objeto y obtiene el poder: " + nuevoPoder.obtenerNombrePoder() + "!");
     }
 
     /**
