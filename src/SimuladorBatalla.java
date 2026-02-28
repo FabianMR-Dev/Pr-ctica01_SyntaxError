@@ -19,10 +19,10 @@ public class SimuladorBatalla {
         ArenaBatalla arena = new ArenaBatalla();
         
         // Crear espectadores
-        Fan esp1 = new Fan("espectador123", "Korby");
-        Fan esp2 = new Fan("espectador456", "MeganMan");
-        Fan esp3 = new Fan("espectador789", "Dittuu");
-        Fan esp4 = new Fan("VIP_User", "Korby");
+        Observador esp1 = new Observador("espectador123", "Korby");
+        Observador esp2 = new Observador("espectador456", "MeganMan");
+        Observador esp3 = new Observador("espectador789", "Dittuu");
+        Observador esp4 = new Observador("VIP_User", "Korby");
         
         arena.registrarEspectador(esp1);
         arena.registrarEspectador(esp2);
