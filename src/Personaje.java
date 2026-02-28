@@ -44,7 +44,7 @@ public abstract class Personaje{
      * El peleador consume un objeto para obtener un nuevo poder de su lista de poderes disponibles. Se notifica a los espectadores sobre el nuevo poder obtenido.
      * @param arena para notificar a los espectadores sobre el nuevo poder obtenido.
      */
-    public void consumirObjeto(ArenaBatall arena) {
+    public void consumirObjeto(ArenaBatalla arena) {
         if (!this.estaVivo() || poderesDisponibles.isEmpty()) return;
         
         Random rand = new Random();

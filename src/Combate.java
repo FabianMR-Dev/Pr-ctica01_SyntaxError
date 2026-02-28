@@ -4,8 +4,6 @@ import java.util.List;
 /**
  * Esta clase representa el combate.
  * Aquí se lleva a cabo y le notifica a los observadores
- * 
- * @author SyntaxError
  */
 public class Combate implements Sujeto {
     //Lista de los espectadores que están viendo el combate
@@ -29,7 +27,7 @@ public class Combate implements Sujeto {
      * @param evento Lo que acaba de suceder en el combate
      */
     @Override
-    public void notificarObservador(String evento) {
+    public void notificar(String evento) {
         //Mostramos en pantalla lo que pasó 
         System.out.println(evento);
         
