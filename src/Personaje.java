@@ -64,7 +64,7 @@ public abstract class Personaje {
 }
 
 /**
- * Korby, el personaje de la franquicia Noentiendo. Tiene un poder base de succión y puede obtener poderes de fuego, roca y espada.
+ * Korby, el personaje de la franquicia Noentiendo. Tiene un poder base de succión y puede obtener poderes de fuego y hielo.
  *⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣤⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
  *⠀⣠⡶⠒⠒⠶⣄⣠⡴⠚⠉⠁⠀⠀⠀⠀⠀⠉⠙⠳⢦⡀⠀⠀⠀⠀⠀⠀
  *⢠⡏⠀⠀⠀⠀⠘⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⡀⠀⠀⠀⠀
@@ -90,7 +90,7 @@ class Korby extends Personaje {
 }
 
 /**
- * MeganMan, el personaje de la franquicia CopCam. Tiene un poder base de puño y puede obtener poderes de escudo, rayo y burbuja.
+ * MeganMan, el personaje de la franquicia CopCam. Tiene un poder base de disparo de proyectiles de energía y puede obtener poderes de escudo y deslizamiento.
  * ⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⠤⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
  *⠀⠀⠀⠀⠀⠀⡠⠮⠈⡪⢙⠠⠐⠒⠹⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀
  *⠀⠀⠀⠀⠀⢼⠀⠤⢔⠁⡘⠀⠀⠀⠀⠀⠱⡄⠀⠀⠀⠀⠀⠀⠀
@@ -113,11 +113,12 @@ class MeganMan extends Personaje {
         this.franquicia = "CopCam";
         this.poderActual = new PoderBaseMeganMan();
         this.poderesDisponibles.add(new PoderEscudoMeganMan());
+        this.poderesDisponibles.add(new PoderDeslizarMeganMan());
     }
 }
 
 /**
- * Dittuu, el personaje de la franquicia ChinPokemon. Tiene un poder base de seduccion y puede obtener poderes de ratón eléctrico, tortuga y dragón.
+ * Dittuu, el personaje de la franquicia ChinPokemon. Tiene un poder base de gelatina y puede obtener poderes de ratón eléctrico, impactrueno.
  * ⢰⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀
  *⠀⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣾⣿
  *⠀⠘⢿⣿⣿⣿⣿⣦⣀⣀⣀⣄⣀⣀⣠⣀⣤⣶⣿⣿⣿⣿⣿⠇
@@ -136,5 +137,6 @@ class Dittuu extends Personaje {
         this.franquicia = "ChinPokemon";
         this.poderActual = new PoderBaseDittuu();
         this.poderesDisponibles.add(new PoderRatonElectricoDittuu());
+        this.poderesDisponibles.add(new PoderImpactruenoDittuu());
     }
 }

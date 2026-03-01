@@ -52,15 +52,33 @@ public class SimuladorBatalla {
             korby.atacar(meganMan, combate);
             korby.atacar(meganMan, combate);
             meganMan.atacar(korby, combate);
+            korby.atacar(meganMan, combate);
             korby.atacar(meganMan, combate); 
             meganMan.hp = 0; // MeganMan muere
         } else if (numCaso == 2) {
             // Caso 2: Gana MeganMan
             meganMan.consumirObjeto(combate);
             meganMan.atacar(korby, combate);
+            korby.atacar(dittuu, combate);
             dittuu.consumirObjeto(combate);
             dittuu.atacar(korby, combate);
+            korby.atacar(dittuu, combate);
+            meganMan.atacar(korby, combate);
+            meganMan.atacar(dittuu, combate);
+            dittuu.atacar(korby, combate);
+            meganMan.atacar(korby, combate);
+            korby.consumirObjeto(combate);
+            korby.atacar(dittuu, combate);
+            meganMan.atacar(korby,combate);
+            korby.atacar(dittuu, combate);
+            dittuu.atacar(korby, combate);
             korby.hp = 0; // Korby muere
+            dittuu.consumirObjeto(combate);
+            meganMan.atacar(dittuu, combate);
+            meganMan.atacar(dittuu, combate);
+            dittuu.atacar(meganMan, combate);
+            meganMan.atacar(dittuu, combate);
+            meganMan.consumirObjeto(combate);
             meganMan.atacar(dittuu, combate);
             meganMan.atacar(dittuu, combate);
             dittuu.hp = 0; // Dittuu muere
@@ -70,7 +88,11 @@ public class SimuladorBatalla {
             dittuu.atacar(meganMan, combate);
             korby.consumirObjeto(combate);
             korby.atacar(meganMan, combate);
+            dittuu.atacar(meganMan,combate);
+            korby.atacar(meganMan, combate);
             meganMan.hp = 0; // MeganMan muere
+            korby.consumirObjeto(combate);
+            dittuu.atacar(korby, combate);
             dittuu.atacar(korby, combate);
             dittuu.atacar(korby, combate);
             korby.hp = 0; // Korby muere

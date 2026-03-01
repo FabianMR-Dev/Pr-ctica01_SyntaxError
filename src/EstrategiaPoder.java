@@ -10,8 +10,8 @@ public interface EstrategiaPoder {
 
 // KorbyPoderes
 class PoderBaseKorby implements EstrategiaPoder {
-    public int calcularDanioAtaque() { return 10; }
-    public int mitigarDanio(int danio) { return danio - 2; }
+    public int calcularDanioAtaque() { return 12; }
+    public int mitigarDanio(int danio) { return danio - 7; }
     public String obtenerNombrePoder() { return "Inhalación"; }
     public String obtenerMensajeAtaque() { return "da un golpe estándar"; }
 }
@@ -33,7 +33,7 @@ class PoderHieloKorby implements EstrategiaPoder {
 // MeganManPoderes
 class PoderBaseMeganMan implements EstrategiaPoder {
     public int calcularDanioAtaque() { return 12; }
-    public int mitigarDanio(int danio) { return danio - 3; }
+    public int mitigarDanio(int danio) { return danio - 8; }
     public String obtenerNombrePoder() { return "Buster Normal"; }
     public String obtenerMensajeAtaque() { return "dispara un pequeño proyectil de energía"; }
 }
@@ -49,7 +49,7 @@ class PoderDeslizarMeganMan implements EstrategiaPoder {
     public int calcularDanioAtaque() { return 10; }
     public int mitigarDanio(int danio) { return 20; } 
     public String obtenerNombrePoder() { return "Deslizamiento"; }
-    public String obtenerMensajeAtaque() { return "movimiento de barrida por el suelo para esquivar y tirar"; }
+    public String obtenerMensajeAtaque() { return "hace un movimiento de barrida por el suelo"; }
 }
 
 // DittuPoderes

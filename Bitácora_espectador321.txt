@@ -3,19 +3,51 @@ Personaje apoyado: Korby
 -----------------------------------------
 ¡COMIENZA EL COMBATE EN LA EMPRESA DE LA ROSA!
 
+¡MeganMan ha consumido un objeto y obtiene el poder: Deslizamiento!
+MeganMan hace un movimiento de barrida por el suelo contra Korby!
+   -> Korby se defiende usando [Inhalación]. Recibe 3 de daño. HP restante: 97
+Korby da un golpe estándar contra Dittuu!
+   -> Dittuu se defiende usando [Gelatina]. Recibe 11 de daño. HP restante: 89
+
 ¡Dittuu ha consumido un objeto y obtiene el poder: Ratón Eléctrico!
-Dittuu lanza un impactrueno contra MeganMan!
-   -> MeganMan se defiende usando [Buster Normal]. Recibe 17 de daño. HP restante: 83
+Dittuu lanza un impactrueno contra Korby!
+   -> Korby se defiende usando [Inhalación]. Recibe 13 de daño. HP restante: 84
+Korby da un golpe estándar contra Dittuu!
+   -> Dittuu se defiende usando [Ratón Eléctrico]. Recibe 8 de daño. HP restante: 81
+MeganMan hace un movimiento de barrida por el suelo contra Korby!
+   -> Korby se defiende usando [Inhalación]. Recibe 3 de daño. HP restante: 81
+MeganMan hace un movimiento de barrida por el suelo contra Dittuu!
+   -> Dittuu se defiende usando [Ratón Eléctrico]. Recibe 6 de daño. HP restante: 75
+Dittuu lanza un impactrueno contra Korby!
+   -> Korby se defiende usando [Inhalación]. Recibe 13 de daño. HP restante: 68
+MeganMan hace un movimiento de barrida por el suelo contra Korby!
+   -> Korby se defiende usando [Inhalación]. Recibe 3 de daño. HP restante: 65
 
 ¡Korby ha consumido un objeto y obtiene el poder: Fuego!
-Korby lanza una llamarada ardiente contra MeganMan!
-   -> MeganMan se defiende usando [Buster Normal]. Recibe 22 de daño. HP restante: 61
+Korby lanza una llamarada ardiente contra Dittuu!
+   -> Dittuu se defiende usando [Ratón Eléctrico]. Recibe 21 de daño. HP restante: 54
+MeganMan hace un movimiento de barrida por el suelo contra Korby!
+   -> Korby se defiende usando [Fuego]. Recibe 5 de daño. HP restante: 60
+Korby lanza una llamarada ardiente contra Dittuu!
+   -> Dittuu se defiende usando [Ratón Eléctrico]. Recibe 21 de daño. HP restante: 33
 Dittuu lanza un impactrueno contra Korby!
-   -> Korby se defiende usando [Fuego]. Recibe 15 de daño. HP restante: 85
-Dittuu lanza un impactrueno contra Korby!
-   -> Korby se defiende usando [Fuego]. Recibe 15 de daño. HP restante: 70
+   -> Korby se defiende usando [Fuego]. Recibe 15 de daño. HP restante: 45
+
+¡Dittuu ha consumido un objeto y obtiene el poder: Impactrueno!
+MeganMan hace un movimiento de barrida por el suelo contra Dittuu!
+   -> Dittuu se defiende usando [Impactrueno]. Recibe 8 de daño. HP restante: 25
+MeganMan hace un movimiento de barrida por el suelo contra Dittuu!
+   -> Dittuu se defiende usando [Impactrueno]. Recibe 8 de daño. HP restante: 17
+Dittuu impacta un trueno contra sus enemigos contra MeganMan!
+   -> MeganMan se defiende usando [Deslizamiento]. Recibe 20 de daño. HP restante: 80
+MeganMan hace un movimiento de barrida por el suelo contra Dittuu!
+   -> Dittuu se defiende usando [Impactrueno]. Recibe 8 de daño. HP restante: 9
+
+¡MeganMan ha consumido un objeto y obtiene el poder: Deslizamiento!
+MeganMan hace un movimiento de barrida por el suelo contra Dittuu!
+   -> Dittuu se defiende usando [Impactrueno]. Recibe 8 de daño. HP restante: 1
 
 ¡EL COMBATE HA TERMINADO!
-¡El ganador indiscutible es Dittuu!
+¡El ganador indiscutible es MeganMan!
 -----------------------------------------
-Lo sentimos, tu personaje: Korbyresultó PERDEDOR del combate. El ganador fue: Dittuu. Suerte para la próxima.
+Lo sentimos, tu personaje: Korbyresultó PERDEDOR del combate. El ganador fue: MeganMan. Suerte para la próxima.
