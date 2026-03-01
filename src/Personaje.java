@@ -6,13 +6,13 @@ import java.util.Random;
  * Clase para representar a un peleador de La Rosa. 
  * Cada personaje tiene un nombre, franquicia, puntos de vida (hp), un poder actual y una lista de poderes disponibles.
  */
-public abstract class Personaje extends SimuladorBatalla {
+public abstract class Personaje {
     
-    String nombre;
-    String franquicia;
-    int hp = 100;
-    EstrategiaPoder poderActual;
-    List<EstrategiaPoder> poderesDisponibles = new ArrayList<>();
+    protected String nombre;
+    protected String franquicia;
+    protected int hp = 100;
+    protected EstrategiaPoder poderActual;
+    protected List<EstrategiaPoder> poderesDisponibles = new ArrayList<>();
     
     /**
      * El peleador ataca a un objetivo usando su poder actual. Se notifica a los espectadores sobre el ataque y si el objetivo puede defenderse.

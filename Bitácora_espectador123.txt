@@ -1,0 +1,21 @@
+------- Bitácora del observador: espectador123 -------
+Personaje apoyado: Korby
+-----------------------------------------
+¡COMIENZA EL COMBATE EN LA EMPRESA DE LA ROSA!
+
+¡Dittuu ha consumido un objeto y obtiene el poder: Ratón Eléctrico!
+Dittuu lanza un impactrueno contra MeganMan!
+   -> MeganMan se defiende usando [Buster Normal]. Recibe 17 de daño. HP restante: 83
+
+¡Korby ha consumido un objeto y obtiene el poder: Fuego!
+Korby lanza una llamarada ardiente contra MeganMan!
+   -> MeganMan se defiende usando [Buster Normal]. Recibe 22 de daño. HP restante: 61
+Dittuu lanza un impactrueno contra Korby!
+   -> Korby se defiende usando [Fuego]. Recibe 15 de daño. HP restante: 85
+Dittuu lanza un impactrueno contra Korby!
+   -> Korby se defiende usando [Fuego]. Recibe 15 de daño. HP restante: 70
+
+¡EL COMBATE HA TERMINADO!
+¡El ganador indiscutible es Dittuu!
+-----------------------------------------
+Lo sentimos, tu personaje: Korbyresultó PERDEDOR del combate. El ganador fue: Dittuu. Suerte para la próxima.

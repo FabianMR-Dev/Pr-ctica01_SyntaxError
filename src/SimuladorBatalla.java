@@ -31,15 +31,27 @@ public class SimuladorBatalla {
 
         combate.notificarObservador("¡COMIENZA EL COMBATE EN LA EMPRESA DE LA ROSA!");
 
-        // Lógica de los casos de prueba (Arreglando las peleas)
+        // Casos de prueba (Arreglando las peleas)
         if (numCaso == 1) {
             // Caso 1: Gana Korby
             korby.consumirObjeto(combate);
             korby.atacar(meganMan, combate);
             meganMan.atacar(dittuu, combate);
-            korby.atacar(dittuu, combate); // Dittuu muere
-            dittuu.hp = 0; 
+            korby.atacar(dittuu, combate);
+            meganMan.consumirObjeto(combate);
+            meganMan.atacar(dittuu, combate); 
+            dittuu.atacar(meganMan, combate);
+            korby.atacar(dittuu, combate);
+            korby.consumirObjeto(combate);
+            korby.atacar(dittuu, combate);
+            dittuu.consumirObjeto(combate);
+            meganMan.atacar(dittuu, combate);
+            korby.atacar(dittuu, combate);
+            dittuu.hp = 0; // Dittuu muere
+            korby.consumirObjeto(combate);
             korby.atacar(meganMan, combate);
+            korby.atacar(meganMan, combate);
+            meganMan.atacar(korby, combate);
             korby.atacar(meganMan, combate); 
             meganMan.hp = 0; // MeganMan muere
         } else if (numCaso == 2) {

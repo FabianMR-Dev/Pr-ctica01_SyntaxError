@@ -12,7 +12,7 @@ public interface EstrategiaPoder {
 class PoderBaseKorby implements EstrategiaPoder {
     public int calcularDanioAtaque() { return 10; }
     public int mitigarDanio(int danio) { return danio - 2; }
-    public String obtenerNombrePoder() { return "Normal"; }
+    public String obtenerNombrePoder() { return "Inhalación"; }
     public String obtenerMensajeAtaque() { return "da un golpe estándar"; }
 }
 
@@ -40,9 +40,16 @@ class PoderBaseMeganMan implements EstrategiaPoder {
 
 class PoderEscudoMeganMan implements EstrategiaPoder {
     public int calcularDanioAtaque() { return 5; }
-    public int mitigarDanio(int danio) { return 0; } // Bloquea todo
+    public int mitigarDanio(int danio) { return 15; } 
     public String obtenerNombrePoder() { return "Escudo de Hojas"; }
     public String obtenerMensajeAtaque() { return "lanza hojas afiladas"; }
+}
+
+class PoderDeslizarMeganMan implements EstrategiaPoder {
+    public int calcularDanioAtaque() { return 10; }
+    public int mitigarDanio(int danio) { return 20; } 
+    public String obtenerNombrePoder() { return "Deslizamiento"; }
+    public String obtenerMensajeAtaque() { return "movimiento de barrida por el suelo para esquivar y tirar"; }
 }
 
 // DittuPoderes
@@ -58,4 +65,11 @@ class PoderRatonElectricoDittuu implements EstrategiaPoder {
     public int mitigarDanio(int danio) { return danio - 4; }
     public String obtenerNombrePoder() { return "Ratón Eléctrico"; }
     public String obtenerMensajeAtaque() { return "lanza un impactrueno"; }
+}
+
+class PoderImpactruenoDittuu implements EstrategiaPoder {
+    public int calcularDanioAtaque() { return 45; }
+    public int mitigarDanio(int danio) { return danio - 2; }
+    public String obtenerNombrePoder() { return "Impactrueno"; }
+    public String obtenerMensajeAtaque() { return "impacta un trueno contra sus enemigos"; }
 }

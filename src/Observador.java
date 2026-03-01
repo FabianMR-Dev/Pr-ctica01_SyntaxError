@@ -47,24 +47,24 @@ public class Observador implements Espectador{
         //Utilizamos try-with-resources para asegurar que el archivo se cierra automáticamente
         try (PrintWriter out = new PrintWriter(new FileWriter("Bitácora_" + id + ".txt"))) {
             //Encabezado de bitácora
-            System.out.println("------- Bitácora del observador: " + id + " -------");
-            System.out.println("Personaje apoyado: " + personajeApoyado );
-            System.out.println("-----------------------------------------");
+            out.println("------- Bitácora del observador: " + id + " -------");
+            out.println("Personaje apoyado: " + personajeApoyado );
+            out.println("-----------------------------------------");
 
             //Escribimos los eventos del historial de combate
             for(String linea: historialCombate) {
-                System.out.println(linea);
+                out.println(linea);
             }
 
-            System.out.println("-----------------------------------------");
+            out.println("-----------------------------------------");
 
             //Mensaje sobre si su personaje apoyado fue ganador o perdedor
             if (ganador != null && ganador.nombre.equals(personajeApoyado)) {
-                System.out.println("¡Felicidades! Tu personaje: " + personajeApoyado + "resultó GANADOR del combate ");
+                out.println("¡Felicidades! Tu personaje: " + personajeApoyado + "resultó GANADOR del combate ");
             } else if (ganador != null ){
-                System.out.println("Lo sentimos, tu personaje: " + personajeApoyado + "resultó PERDEDOR del combate. El ganador fue: " + ganador.nombre + ". Suerte para la próxima.");
+                out.println("Lo sentimos, tu personaje: " + personajeApoyado + "resultó PERDEDOR del combate. El ganador fue: " + ganador.nombre + ". Suerte para la próxima.");
             } else {
-                System.out.println("El combate terminó en empate");
+                out.println("El combate terminó en empate");
             }
         } catch (IOException e) {
             //Si algo sale mal al escribir el archivo, mostramos mensaje de error
