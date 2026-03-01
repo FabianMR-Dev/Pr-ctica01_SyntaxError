@@ -1,0 +1,29 @@
+------- Bitácora del observador: espectador789 -------
+Personaje apoyado: Dittuu
+-----------------------------------------
+¡COMIENZA EL COMBATE EN LA EMPRESA DE LA ROSA!
+
+¡Dittuu ha consumido un objeto y obtiene el poder: Impactrueno!
+Dittuu impacta un trueno contra sus enemigos contra MeganMan!
+   -> MeganMan se defiende usando [Buster Normal]. Recibe 37 de daño. HP restante: 63
+
+¡Korby ha consumido un objeto y obtiene el poder: Fuego!
+Korby lanza una llamarada ardiente contra MeganMan!
+   -> MeganMan se defiende usando [Buster Normal]. Recibe 17 de daño. HP restante: 46
+Dittuu impacta un trueno contra sus enemigos contra MeganMan!
+   -> MeganMan se defiende usando [Buster Normal]. Recibe 37 de daño. HP restante: 9
+Korby lanza una llamarada ardiente contra MeganMan!
+   -> MeganMan se defiende usando [Buster Normal]. Recibe 17 de daño. HP restante: 0
+
+¡Korby ha consumido un objeto y obtiene el poder: Fuego!
+Dittuu impacta un trueno contra sus enemigos contra Korby!
+   -> Korby se defiende usando [Fuego]. Recibe 40 de daño. HP restante: 60
+Dittuu impacta un trueno contra sus enemigos contra Korby!
+   -> Korby se defiende usando [Fuego]. Recibe 40 de daño. HP restante: 20
+Dittuu impacta un trueno contra sus enemigos contra Korby!
+   -> Korby se defiende usando [Fuego]. Recibe 40 de daño. HP restante: 0
+
+¡EL COMBATE HA TERMINADO!
+¡El ganador indiscutible es Dittuu!
+-----------------------------------------
+¡Felicidades! Tu personaje: Dittuuresultó GANADOR del combate 
