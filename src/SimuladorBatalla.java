@@ -1,8 +1,3 @@
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class SimuladorBatalla {
@@ -16,56 +11,56 @@ public class SimuladorBatalla {
     }
 
     public static void ejecutarSimulacion(int numCaso) {
-        ArenaBatalla arena = new ArenaBatalla();
+        Combate combate = new Combate();
         
-        // Crear espectadores
-        Fan esp1 = new Fan("espectador123", "Korby");
-        Fan esp2 = new Fan("espectador456", "MeganMan");
-        Fan esp3 = new Fan("espectador789", "Dittuu");
-        Fan esp4 = new Fan("VIP_User", "Korby");
+        // Crear observadores
+        Observador esp1 = new Observador("espectador123", "Korby");
+        Observador esp2 = new Observador("espectador456", "MeganMan");
+        Observador esp3 = new Observador("espectador789", "Dittuu");
+        Observador esp4 = new Observador("espectador321", "Korby");
         
-        arena.registrarEspectador(esp1);
-        arena.registrarEspectador(esp2);
-        arena.registrarEspectador(esp3);
-        arena.registrarEspectador(esp4);
+        combate.registrarObservador(esp1);
+        combate.registrarObservador(esp2);
+        combate.registrarObservador(esp3);
+        combate.registrarObservador(esp4);
 
         // Crear personajes
         Korby korby = new Korby();
         MeganMan meganMan = new MeganMan();
         Dittuu dittuu = new Dittuu();
 
-        arena.notificarEspectadores("¡COMIENZA EL COMBATE EN LA EMPRESA DE LA ROSA!");
+        combate.notificarObservador("¡COMIENZA EL COMBATE EN LA EMPRESA DE LA ROSA!");
 
         // Lógica de los casos de prueba (Arreglando las peleas)
         if (numCaso == 1) {
             // Caso 1: Gana Korby
-            korby.consumirObjeto(arena);
-            korby.atacar(meganMan, arena);
-            meganMan.atacar(dittuu, arena);
-            korby.atacar(dittuu, arena); // Dittuu muere
+            korby.consumirObjeto(combate);
+            korby.atacar(meganMan, combate);
+            meganMan.atacar(dittuu, combate);
+            korby.atacar(dittuu, combate); // Dittuu muere
             dittuu.hp = 0; 
-            korby.atacar(meganMan, arena);
-            korby.atacar(meganMan, arena); 
+            korby.atacar(meganMan, combate);
+            korby.atacar(meganMan, combate); 
             meganMan.hp = 0; // MeganMan muere
         } else if (numCaso == 2) {
             // Caso 2: Gana MeganMan
-            meganMan.consumirObjeto(arena);
-            meganMan.atacar(korby, arena);
-            dittuu.consumirObjeto(arena);
-            dittuu.atacar(korby, arena);
+            meganMan.consumirObjeto(combate);
+            meganMan.atacar(korby, combate);
+            dittuu.consumirObjeto(combate);
+            dittuu.atacar(korby, combate);
             korby.hp = 0; // Korby muere
-            meganMan.atacar(dittuu, arena);
-            meganMan.atacar(dittuu, arena);
+            meganMan.atacar(dittuu, combate);
+            meganMan.atacar(dittuu, combate);
             dittuu.hp = 0; // Dittuu muere
         } else {
             // Caso 3: Gana Dittuu
-            dittuu.consumirObjeto(arena);
-            dittuu.atacar(meganMan, arena);
-            korby.consumirObjeto(arena);
-            korby.atacar(meganMan, arena);
+            dittuu.consumirObjeto(combate);
+            dittuu.atacar(meganMan, combate);
+            korby.consumirObjeto(combate);
+            korby.atacar(meganMan, combate);
             meganMan.hp = 0; // MeganMan muere
-            dittuu.atacar(korby, arena);
-            dittuu.atacar(korby, arena);
+            dittuu.atacar(korby, combate);
+            dittuu.atacar(korby, combate);
             korby.hp = 0; // Korby muere
         }
 
@@ -75,9 +70,9 @@ public class SimuladorBatalla {
         else if (meganMan.estaVivo()) ganador = meganMan;
         else if (dittuu.estaVivo()) ganador = dittuu;
 
-        arena.notificarEspectadores("\n¡EL COMBATE HA TERMINADO!");
+        combate.notificarObservador("\n¡EL COMBATE HA TERMINADO!");
         if(ganador != null) {
-            arena.notificarEspectadores("¡El ganador indiscutible es " + ganador.nombre + "!");
+            combate.notificarObservador("¡El ganador indiscutible es " + ganador.nombre + "!");
         }
 
         // Generar Bitácoras

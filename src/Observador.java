@@ -1,7 +1,8 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.SocketPermission;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Esta clase representa a un observador que está viendo el combate.
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 public class Observador implements Espectador{
     private String id; //id de los observadores 
     private String personajeApoyado;
-    private list<String> historialCombate;
+    private List<String> historialCombate;
 
     /**
      * Constructor -creamos un nuevo espectador que verá la transmisión del combate

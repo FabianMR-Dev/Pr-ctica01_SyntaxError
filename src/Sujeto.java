@@ -21,5 +21,5 @@ public interface Sujeto {
      * Le dice a los observadores qué ha pasado en el combate 
      * @param obs El observador que ve el combate 
      */
-    public void notificarObservador(Espectador obs);
+    public void notificarObservador(String obs);
 }

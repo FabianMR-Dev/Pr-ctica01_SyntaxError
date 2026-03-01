@@ -17,41 +17,41 @@ public abstract class Personaje extends SimuladorBatalla {
     /**
      * El peleador ataca a un objetivo usando su poder actual. Se notifica a los espectadores sobre el ataque y si el objetivo puede defenderse.
      * @param objetivo a quien se va a atacar.
-     * @param arena para notificar a los espectadores sobre el ataque.
+     * @param combate para notificar a los espectadores sobre el ataque.
      */
-    public void atacar(Personaje objetivo, TransmisionCombate arena) {
+    public void atacar(Personaje objetivo, Sujeto combate) {
         if (!this.estaVivo() || !objetivo.estaVivo()) return;
         
         int danioGenerado = poderActual.calcularDanioAtaque();
-        arena.notificarEspectadores(this.nombre + " " + poderActual.obtenerMensajeAtaque() + " contra " + objetivo.nombre + "!");
-        objetivo.defender(danioGenerado, arena);
+        combate.notificarObservador(this.nombre + " " + poderActual.obtenerMensajeAtaque() + " contra " + objetivo.nombre + "!");
+        objetivo.defender(danioGenerado, combate);
     }
 
     /**
      * El peleador se defiende de un ataque entrante usando su poder actual para mitigar el daño. Se notifica a los espectadores sobre la defensa y el daño recibido.
      * @param objetivo de quien se recibe el ataque.
-     * @param arena para notificar a los espectadores sobre el ataque.
+     * @param combate para notificar a los espectadores sobre el ataque.
      */
-    public void defender(int danioEntrante, TransmisionCombate arena) {
+    public void defender(int danioEntrante, Sujeto combate) {
         int danioReal = poderActual.mitigarDanio(danioEntrante);
         if (danioReal < 0) danioReal = 0;
         this.hp -= danioReal;
         
-        arena.notificarEspectadores("   -> " + this.nombre + " se defiende usando [" + poderActual.obtenerNombrePoder() + "]. Recibe " + danioReal + " de daño. HP restante: " + Math.max(0, this.hp));
+        combate.notificarObservador("   -> " + this.nombre + " se defiende usando [" + poderActual.obtenerNombrePoder() + "]. Recibe " + danioReal + " de daño. HP restante: " + Math.max(0, this.hp));
     }
 
     /**
      * El peleador consume un objeto para obtener un nuevo poder de su lista de poderes disponibles. Se notifica a los espectadores sobre el nuevo poder obtenido.
-     * @param arena para notificar a los espectadores sobre el nuevo poder obtenido.
+     * @param combate para notificar a los espectadores sobre el nuevo poder obtenido.
      */
-    public void consumirObjeto(TransmisionCombate arena) {
+    public void consumirObjeto(Sujeto combate) {
         if (!this.estaVivo() || poderesDisponibles.isEmpty()) return;
         
         Random rand = new Random();
         EstrategiaPoder nuevoPoder = poderesDisponibles.get(rand.nextInt(poderesDisponibles.size()));
         this.poderActual = nuevoPoder;
         
-        arena.notificarEspectadores("\n¡" + this.nombre + " ha consumido un objeto y obtiene el poder: " + nuevoPoder.obtenerNombrePoder() + "!");
+        combate.notificarObservador("\n¡" + this.nombre + " ha consumido un objeto y obtiene el poder: " + nuevoPoder.obtenerNombrePoder() + "!");
     }
 
     /**
